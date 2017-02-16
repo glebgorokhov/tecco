@@ -30,9 +30,18 @@
 	&__logoblock {position: absolute; left: 0; top: 0; width: 100%; box-sizing: border-box; padding: 41px 39px; z-index: 1;}
 	&__logotext {font-size: 13px; margin-top: 12px; padding-left: 4px; color: $darktwo;}
 	&__logo img {width: 166px; height: 41px;}
-	&__burgermenu {float: right; position: relative; right: -4px;
-		svg {transition: all 0.25s ease-in-out;}
-		&.active svg {fill: $darkone;}
+	&__burgermenu {float: right; position: relative; right: -4px; width: 45px; height: 36px;
+		span {display: inline-block; width: 45px; height: 7px; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: $darkone; transition: all .25s ease-in-out;
+			&:before, &:after {content: ""; display: inline-block; width: 45px; height: 7px; position: absolute; left: 0; top: 0; background-color: $darkone; transition: all .25s ease-in-out;}
+			&:before {transform: translate3d(0,-15px,0);}
+			&:after {transform: translate3d(0,15px,0);}
+		}
+		&.active {
+			span {background-color: transparent;
+				&:before {transform: translate3d(0,0,0) rotate(45deg);}
+				&:after {transform: translate3d(0,0,0) rotate(-45deg);}
+			}
+		}
 	}
 	&__square {position: absolute; z-index: 2;
 		&_language {top: 49px; right: 35px; width: 36px; height: 36px;}
@@ -379,11 +388,19 @@
 	&__mail {position: relative;
 		&:after {content: ""; position: absolute; left: 3px; bottom: -1px; width: 128px; height: 1px; background-color: #fff; transition: all 0.25s ease-in-out;}
 	}
-	&__form {margin-top: 96px;
-		input, textarea {width: 100%; border: 1px solid #fff; font-size: 25px; background-color: transparent; font-family: $gothic; letter-spacing: -0.04em; padding: 0 15px;}
+	&__form {margin-top: 96px; position: relative;
+		input, textarea {width: 100%; border: 1px solid #fff; font-size: 25px; background-color: transparent; font-family: $gothic; letter-spacing: -0.04em; padding: 0 15px; transition: all .25s ease-in-out;
+			&.error {border-color: #ff0000;}
+			&.active {opacity: 0; pointer-events: none;}
+		}
 		input {line-height: 72px; padding-bottom: 6px;}
 		textarea {margin-top: 44px; height: 311px; resize: none; padding: 22px 15px;}
-		.button {margin-top: 46px; width: 100%; transition: all 0.25s ease-in-out;}
+		.button {margin-top: 46px; width: 100%; transition: all 0.25s ease-in-out;
+			&.active {opacity: 0; pointer-events: none;}
+		}
+	}
+	&__success {font-size: 35px; font-family: $gothic; text-align: center; opacity: 0; pointer-events: none; position: absolute; left: 0; top: 0;
+		&.active {opacity: 1; pointer-events: all;}
 	}
 	&__pinsquare {display: inline-block; width: 89px; height: 89px; border: 1px solid #fff; position: absolute; right: -22px; bottom: -20px; transition: all 0.25s ease-in-out;
 		svg {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; transition: all 0.25s ease-in-out;}
@@ -426,7 +443,7 @@
 .cases__list > li > a:hover ~ .cases__arrow,
 .company__quotetext:before,
 .comapny__quotearrow:hover,
-.contacts__address svg,
+.contacts__address > svg,
 .contacts__mail:after,
 .case__link:after {
 	animation: bouncex 1.5s linear infinite;

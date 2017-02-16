@@ -4,9 +4,9 @@
 			<a href="index.php"><img src="img/logo_tecco.svg" alt="@@"></a>
 			<p class="header__logotext">Web and mobile solutions</p>
 		</div>
-		<span class="header__burgermenu">
-			<svg xmlns="http://www.w3.org/2000/svg" width="45" height="36" viewBox="0 0 45 36" fill="#b0b0b8"><defs></defs><path id="Rectangle_2_copy_2" data-name="Rectangle 2 copy 2" class="cls-1" d="M578,17h45v8H578V17Zm0,14h45v8H578V31Zm0,14h45v8H578V45Z" transform="translate(-578 -17)"/></svg>
-		</span>
+		<div class="header__burgermenu">
+			<span></span>
+		</div>
 	</div>
 
 	<div class="header__side">
