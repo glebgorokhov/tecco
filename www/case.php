@@ -91,17 +91,17 @@
 			</div>
 			<div class="case__about__block last">
 				<p class="case__about__text case__about__text_strong">Solution</p>
-				<p class="case__about__text">Be creative, be proud of making your own design, and feel the wibe of genetation progress.</p>
+				<p class="case__about__text">Be creative, be proud of making your own design, and feel the wibe of generation progress.</p>
 			</div>
-			<ul class="case__about__lists">
-					<li>Проведение исследования</li>
-					<li>Разработка архитектуры, составление технического задания</li>
-					<li>Рзработка прототипа</li>
-					<li>Разработка веб и мобильног интерфейса</li>
-					<li>Front end работы</li>
-					<li>Front end работы</li>
-					<li>QA</li>
-					<li>Суппорт проекта</li>
+			<ul class="case__about__list">
+				<li><p>Проведение исследования</p></li>
+				<li><p>Разработка архитектуры, составление технического задания</p></li>
+				<li><p>Разработка прототипа</p></li>
+				<li><p>Разработка веб и мобильного интерфейса</p></li>
+				<li><p>Front end работы</p></li>
+				<li><p>Back end работы</p></li>
+				<li><p>QA</p></li>
+				<li><p>Суппорт проекта</p></li>
 				</ul>
 				<p class="case__about__text case__about__text_small">Fully responsive design created 3 different brekpoints allows Venden to show their product in most convenient and good looking way</p>
 		</div>
