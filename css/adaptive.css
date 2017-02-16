@@ -277,9 +277,9 @@
         z-index: 1;
         transform: scale3d(1, 1, 1);
         transition: all 0.25s ease-in-out; }
-      .header__caseslink a:hover:before {
+      .header__caseslink a:hover:before, .header__caseslink a.active:before {
         background: linear-gradient(to right, rgba(34, 34, 31, 0) 0%, #22221f 50%, #22221f 100%); }
-      .header__caseslink a:hover:after {
+      .header__caseslink a:hover:after, .header__caseslink a.active:after {
         background: linear-gradient(to bottom, rgba(34, 34, 31, 0) 0%, #22221f 50%, #22221f 100%); }
     .header__caseslink p {
       position: relative;
@@ -299,6 +299,8 @@
   .contacts__pinsquare {
     display: none; }
   .contacts__social {
+    display: none; }
+  .header__square_social {
     display: none; } }
 
 @media (max-width: 999px) {

@@ -110,7 +110,7 @@ body {
   display: flex; }
 
 html, body {
-  overflow-x: hidden; }
+  min-width: 2000px; }
 
 header, section, footer {
   width: 100%;
@@ -225,7 +225,8 @@ select, input, textarea {
     right: 0;
     top: 0;
     bottom: 0;
-    margin: auto; }
+    margin: auto;
+    transition: all 1s ease-in-out; }
 
 .squareblock {
   width: 550px;
@@ -263,14 +264,15 @@ select, input, textarea {
 .social {
   border: 4px solid #000;
   border-right: 0;
-  height: 200px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 12;
+  transform: translateY(-50%); }
   .social li {
     width: 46px;
-    height: 47px;
-    border-top: 1px solid #000; }
-    .social li:first-child {
-      border-top: 0; }
+    height: 47px; }
   .social__link {
     display: inline-block;
     width: 100%;

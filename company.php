@@ -12,8 +12,9 @@
 <body> 
 
 <?php include "blocks/sidebar.php"; ?>
+<?php include "blocks/social.php"; ?>
 
-<section class="content company">
+<section class="content company" data-page="company">
 	<div class="company__mainpart">
 		<div class="container">
 			<h2 class="content__heading">Web &amp; mobile разработка, поддержка и развитие</h2>
@@ -40,10 +41,10 @@
 		</div>
 	</div>
 	<div class="company__cityview">
-		<img src="img/cityview_color.jpg" alt="@@">
+		<img src="img/cityview_color.jpg" alt="@@" class="colored">
 		<img src="img/cityview.png" alt="@@">
 	</div>
-	<a href="#" class="company__quoteblock">
+	<div class="company__quoteblock company__quoteblock_white">
 		<div class="company__quoteimage">
 			<img src="img/person_1.jpg" alt="@@">
 		</div>
@@ -51,48 +52,47 @@
 			<p class="company__quotetext">
 			Безумно остроумная цитата, которая проливает свет на крутость компании и прошаренность ее руководителя</p>
 			<p class="company__quoteauthor">Максим Кондратьев<br>Tecco IT CEO</p>
-			<img class="company__quotearrow" src="img/icon_arrow_5.svg" alt="@@" width="19" height="35">
+			<a href="#" class="company__quotearrow"><img src="img/icon_arrow_5.svg" alt="@@"></a>
 		</div>
-	</a>
-	<a href="#" class="company__quoteblock company__quoteblock_bottom">
+	</div>
+	<div class="company__quoteblock company__quoteblock_bottom">
 		<div class="company__quote">
 			<p class="company__quotetext">
 			Безумно остроумная цитата, которая проливает свет на крутость компании и прошаренность ее руководителя</p>
 			<p class="company__quoteauthor">Евгений Чичваркин<br>Head of sales Dept.</p>
-			<img class="company__quotearrow" src="img/icon_arrow_5.svg" alt="@@" width="19" height="35">
 		</div>
 		<div class="company__quoteimage">
 			<img src="img/person_2.jpg" alt="@@">
 		</div>
-	</a>
+	</div>
 	<div class="container container_bottom">
 		<div class="company__logos">
 			<div>
 				<img src="img/logo_atrais.png" alt="@@">
 			</div>
 			<div>
-				<img src="img/logo_bauren.svg" alt="@@" width="199" height="44">
+				<img src="img/logo_bauren.svg" alt="@@">
 			</div>
 			<div>
-				<img src="img/logo_1travel.svg" alt="@@" width="222" height="55">
+				<img src="img/logo_1travel.svg" alt="@@">
 			</div>
 			<div>
 				<img src="img/logo_iespeju.png" alt="@@">
 			</div>
 			<div>
-				<img src="img/logo_mm.svg" alt="@@" width="167" height="115">
+				<img src="img/logo_mm.svg" alt="@@">
 			</div>
 			<div>
 				<img src="img/logo_picanova.png" alt="@@">
 			</div>
 			<div>
-				<img src="img/logo_proks.svg" alt="@@" width="230" height="100">
+				<img src="img/logo_proks.svg" alt="@@">
 			</div>
 			<div>
-				<img src="img/logo_quicknews.svg" alt="@@" width="170" height="73">
+				<img src="img/logo_quicknews.svg" alt="@@">
 			</div>
 			<div>
-				<img src="img/logo_stamtons.svg" alt="@@" width="229" height="34">
+				<img src="img/logo_stamtons.svg" alt="@@">
 			</div>
 			<div>
 				<img src="img/logo_sig.png" alt="@@">

@@ -12,13 +12,14 @@
 <body> 
 
 <?php include "blocks/sidebar.php"; ?>
+<?php include "blocks/social.php"; ?>
 
-<section class="content services">
+<section class="content services" data-page="services">
 	<div class="content-tabs">
 		<div class="container">
 			<ul class="content-tabs__list">
 				<li class="active"><a class="content-tabs__link" href="#">Web &amp; mobile Development</a></li>
-				<li><a class="content-tabs__link" href="#">IT Outsourcing</a></li>
+				<li><a class="content-tabs__link nav" href="#outsourcing">IT Outsourcing</a></li>
 			</ul>
 		</div>
 	</div>
@@ -50,7 +51,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="services__outsourcing">
+	<div class="services__outsourcing" id="outsourcing">
 		<div class="container">
 			<div class="content__textblock services__textblock">
 				<h2 class="content__heading">IT outsourcing</h2>

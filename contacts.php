@@ -12,8 +12,9 @@
 <body> 
 
 <?php include "blocks/sidebar.php"; ?>
+<?php include "blocks/social.php"; ?>
 
-<section class="content contacts">
+<section class="content contacts" data-page="contact">
 	<div class="contacts__leftside">
 		<div class="container">
 			<p class="content__text contacts__address">Riga<br>
@@ -60,11 +61,12 @@
 <script>
   function initMap() {
     var myLatLng = {lat: 56.975652, lng: 24.136556};
-
-	var image = new google.maps.MarkerImage(
-    	'img/icon_pin.svg',
-		new google.maps.Size(42,59)
-	);
+	
+	var image = {
+        url: 'img/icon_pin.svg',
+        scaledSize : new google.maps.Size(42, 59)
+    };
+	  
     // Create a map object and specify the DOM element for display.
     var map = new google.maps.Map(document.getElementById('map'), {
       center: myLatLng,

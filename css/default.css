@@ -111,7 +111,7 @@ body {
   display: flex; }
 
 html, body {
-  overflow-x: hidden; }
+  min-width: 2000px; }
 
 header, section, footer {
   width: 100%;
@@ -226,7 +226,8 @@ select, input, textarea {
     right: 0;
     top: 0;
     bottom: 0;
-    margin: auto; }
+    margin: auto;
+    transition: all 1s ease-in-out; }
 
 .squareblock {
   width: 550px;
@@ -264,14 +265,15 @@ select, input, textarea {
 .social {
   border: 4px solid #000;
   border-right: 0;
-  height: 200px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 12;
+  transform: translateY(-50%); }
   .social li {
     width: 46px;
-    height: 47px;
-    border-top: 1px solid #000; }
-    .social li:first-child {
-      border-top: 0; }
+    height: 47px; }
   .social__link {
     display: inline-block;
     width: 100%;
@@ -300,7 +302,8 @@ select, input, textarea {
 .content {
   display: inline-block;
   flex: 1;
-  color: #fff; }
+  color: #fff;
+  /*margin-left: 400px;*/ }
   .content_main {
     background-image: url("../img/bg_main2.jpg");
     background-size: cover;
@@ -331,9 +334,8 @@ select, input, textarea {
     bottom: -397px; }
   .content__bgphone {
     position: absolute;
-    top: 50%;
+    top: 12%;
     right: 0;
-    transform: translateY(-43%);
     z-index: 1;
     pointer-events: none; }
   .content__text {
@@ -370,19 +372,28 @@ select, input, textarea {
 .header {
   width: 400px;
   position: relative;
-  background-color: #f5f5f6; }
+  left: 0;
+  top: 0;
+  background-color: #f5f5f6;
+  /*overflow-y: scroll; height: 100%;*/ }
+  .header__side {
+    position: relative; }
   .header__logoblock {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     box-sizing: border-box;
-    padding: 41px 39px; }
+    padding: 41px 39px;
+    z-index: 1; }
   .header__logotext {
     font-size: 13px;
     margin-top: 12px;
     padding-left: 4px;
     color: #1f2124; }
+  .header__logo img {
+    width: 166px;
+    height: 41px; }
   .header__burgermenu {
     float: right;
     position: relative;
@@ -480,13 +491,13 @@ select, input, textarea {
         transform: scale3d(0, 1, 1);
         transition: all 0.25s ease-in-out;
         transform-origin: right center; }
-      .header__menu a:hover:before {
+      .header__menu a:hover:before, .header__menu a.active:before {
         transform: scale3d(1, 1, 1); }
-      .header__menu a:hover p {
+      .header__menu a:hover p, .header__menu a.active p {
         color: #fff !important; }
-      .header__menu a:hover .header__menuheading:after {
+      .header__menu a:hover .header__menuheading:after, .header__menu a.active .header__menuheading:after {
         background-color: #fff; }
-      .header__menu a:hover svg {
+      .header__menu a:hover svg, .header__menu a.active svg {
         fill: #fff; }
       .header__menu a p {
         position: relative;
@@ -784,16 +795,6 @@ select, input, textarea {
           transition: all 0.25s ease-in-out; }
 
 /*-----------------------------------------------------*/
-.cases .social {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  z-index: 2;
-  transform: translateY(-58%);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.25s ease-in-out; }
-
 .cases .content-tabs {
   position: relative; }
   .cases .content-tabs__switcher {
@@ -831,12 +832,14 @@ select, input, textarea {
   .cases__list.squares > li:hover .cases__textblock {
     opacity: 1;
     pointer-events: all; }
+  .cases__list.squares > li > a {
+    width: 100%; }
 
 .cases__list.squares .cases__textblock {
   width: auto;
   text-align: center;
   margin: auto;
-  opacity: 0;
+  /*opacity: 0;*/
   pointer-events: none;
   position: relative;
   z-index: 2; }
@@ -857,7 +860,6 @@ select, input, textarea {
   padding: 133px 0 113px;
   box-sizing: border-box;
   text-align: right;
-  cursor: pointer;
   transition: all 0.25s ease-in-out; }
   .cases__list > li:after {
     content: "";
@@ -871,15 +873,14 @@ select, input, textarea {
     pointer-events: none;
     transition: all 0.25a ease-in-out;
     z-index: 1; }
-  .cases__list > li:hover .social {
-    opacity: 1;
-    pointer-events: all; }
+  .cases__list > li:hover .cases__bg {
+    transform: scale(1.05); }
   .cases__list > li > a {
     display: inline-block;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
-    width: 100%;
+    width: 40%;
     height: 100%; }
 
 .cases__bg {
@@ -894,7 +895,8 @@ select, input, textarea {
   width: 0;
   object-fit: cover;
   pointer-events: none;
-  z-index: -1; }
+  z-index: -1;
+  transition: all .25s ease-in-out; }
 
 .cases__arrow {
   position: absolute;
@@ -995,14 +997,11 @@ select, input, textarea {
   .company__quoteblock {
     display: flex;
     height: 800px; }
-    .company__quoteblock:hover .company__quote {
-      background-color: #fff;
-      color: #221f1f; }
-    .company__quoteblock:hover .company__quotearrow {
-      opacity: 1;
-      pointer-events: all; }
     .company__quoteblock > div {
       width: 50%; }
+    .company__quoteblock_white .company__quote {
+      background-color: #fff;
+      color: #221f1f; }
   .company__quote {
     background-color: #1a232c;
     transition: all 0.25s ease-in-out;
@@ -1034,9 +1033,15 @@ select, input, textarea {
     position: absolute;
     right: 64px;
     bottom: 60px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.25s ease-in-out; }
+    transition: all 0.25s ease-in-out;
+    width: 19px;
+    height: 35px; }
+    .company__quotearrow:hover {
+      width: 23px;
+      height: 42px; }
+    .company__quotearrow img {
+      width: 100%;
+      height: 100%; }
   .company__quoteimage {
     position: relative;
     overflow: hidden; }
@@ -1060,6 +1065,24 @@ select, input, textarea {
       width: 20%;
       text-align: center;
       margin-top: 21px; }
+      .company__logos div:nth-child(2) img {
+        width: 199px;
+        height: 44px; }
+      .company__logos div:nth-child(3) img {
+        width: 222px;
+        height: 55px; }
+      .company__logos div:nth-child(5) img {
+        width: 167px;
+        height: 115px; }
+      .company__logos div:nth-child(7) img {
+        width: 230px;
+        height: 100px; }
+      .company__logos div:nth-child(8) img {
+        width: 170px;
+        height: 73px; }
+      .company__logos div:nth-child(9) img {
+        width: 229px;
+        height: 34px; }
   .company__moreinfo {
     margin-top: 216px;
     position: relative;
@@ -1170,7 +1193,8 @@ select, input, textarea {
     left: 0;
     top: 0;
     bottom: 0;
-    margin: auto; }
+    margin: auto;
+    transform: rotate(180deg); }
 
 .case__firstscreen {
   height: 1087px;
@@ -1196,7 +1220,9 @@ select, input, textarea {
     z-index: -1; }
 
 .case__logo {
-  margin-left: -11px; }
+  margin-left: -11px;
+  width: 323px;
+  height: 97px; }
   .case__logo_bottom {
     position: absolute;
     left: 6.3%;
@@ -1519,6 +1545,33 @@ select, input, textarea {
         bottom: 0;
         margin: auto; }
 
+@keyframes bouncex {
+  0%, 50%, 100% {
+    transform: translate3d(0, 0, 0); }
+  25% {
+    transform: translate3d(3px, 0, 0); }
+  75% {
+    transform: translate3d(-3px, 0, 0); } }
+
+@keyframes bouncey {
+  0%, 50%, 100% {
+    transform: translate3d(0, 0, 0); }
+  25% {
+    transform: translate3d(0, 3px, 0); }
+  75% {
+    transform: translate3d(0, -3px, 0); } }
+
+.scrollbutton svg {
+  animation: bouncey 1.5s linear infinite; }
+
+.cases__list > li > a:hover ~ .cases__arrow,
+.company__quotetext:before,
+.comapny__quotearrow:hover,
+.contacts__address svg,
+.contacts__mail:after,
+.case__link:after {
+  animation: bouncex 1.5s linear infinite; }
+
 .popup {
   display: none;
   width: 350px;
@@ -1803,9 +1856,9 @@ select, input, textarea {
         z-index: 1;
         transform: scale3d(1, 1, 1);
         transition: all 0.25s ease-in-out; }
-      .header__caseslink a:hover:before {
+      .header__caseslink a:hover:before, .header__caseslink a.active:before {
         background: linear-gradient(to right, rgba(34, 34, 31, 0) 0%, #22221f 50%, #22221f 100%); }
-      .header__caseslink a:hover:after {
+      .header__caseslink a:hover:after, .header__caseslink a.active:after {
         background: linear-gradient(to bottom, rgba(34, 34, 31, 0) 0%, #22221f 50%, #22221f 100%); }
     .header__caseslink p {
       position: relative;
@@ -1825,6 +1878,8 @@ select, input, textarea {
   .contacts__pinsquare {
     display: none; }
   .contacts__social {
+    display: none; }
+  .header__square_social {
     display: none; } }
 
 @media (max-width: 999px) {

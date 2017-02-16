@@ -12,8 +12,10 @@
 <body> 
 
 <?php include "blocks/sidebar.php"; ?>
+<?php include "blocks/social.php"; ?>
 
-<section class="content cases">
+<section class="content cases" data-page="cases">
+	
 	<div class="content-tabs">
 		<div class="container">
 			<ul class="content-tabs__list">
@@ -53,7 +55,6 @@
 			</div>
 			<img class="cases__arrow" src="img/icon_arrow_4.svg" alt="@@" width="31" height="26">
 			<img class="cases__bg" src="img/casebg_1.jpg" alt="@@">
-			<?php include "blocks/casesocial.php"; ?>
 		</li>
 		<li data-category="mobileapps">
 			<a href="#"></a>
@@ -64,7 +65,6 @@
 			</div>
 			<img class="cases__arrow" src="img/icon_arrow_4.svg" alt="@@" width="31" height="26">
 			<img class="cases__bg" src="img/casebg_2.jpg" alt="@@">
-			<?php include "blocks/casesocial.php"; ?>
 		</li>
 		<li data-category="corporate">
 			<a href="#"></a>
@@ -75,7 +75,6 @@
 			</div>
 			<img class="cases__arrow" src="img/icon_arrow_4.svg" alt="@@" width="31" height="26">
 			<img class="cases__bg" src="img/casebg_3.jpg" alt="@@">
-			<?php include "blocks/casesocial.php"; ?>
 		</li>
 		<li data-category="logoidentity">
 			<a href="#"></a>
@@ -86,7 +85,6 @@
 			</div>
 			<img class="cases__arrow" src="img/icon_arrow_4.svg" alt="@@" width="31" height="26">
 			<img class="cases__bg" src="img/casebg_4.jpg" alt="@@">
-			<?php include "blocks/casesocial.php"; ?>
 		</li>
 		<li data-category="onlineservices">
 			<a href="#"></a>
@@ -97,7 +95,6 @@
 			</div>
 			<img class="cases__arrow" src="img/icon_arrow_4.svg" alt="@@" width="31" height="26">
 			<img class="cases__bg" src="img/casebg_5.jpg" alt="@@">
-			<?php include "blocks/casesocial.php"; ?>
 		</li>
 		<li data-category="mobileapps">
 			<a href="#"></a>
@@ -108,7 +105,6 @@
 			</div>
 			<img class="cases__arrow" src="img/icon_arrow_4.svg" alt="@@" width="31" height="26">
 			<img class="cases__bg" src="img/casebg_6.jpg" alt="@@">
-			<?php include "blocks/casesocial.php"; ?>
 		</li>
 	</ul>
 </section>

@@ -12,6 +12,7 @@
 <body>
 
 <?php include "blocks/sidebar.php"; ?>
+<?php include "blocks/social.php"; ?>
 
 <section class="content content_main">
   <div class="container">

@@ -1,13 +1,13 @@
 @import "basics.scss";
 
-.content {display: inline-block; flex: 1; color: #fff;
+.content {display: inline-block; flex: 1; color: #fff; /*margin-left: 400px;*/
 	&_main {background-image: url('../img/bg_main2.jpg'); background-size: cover; background-position: center; padding-top: 270px; position: relative; overflow: hidden;
 		.container {position: relative; z-index: 2;}
 	}
 	&__heading {font-size: 51px; font-weight: 600; font-family: $gothic; letter-spacing: -0.04em;}
 	&__scroll-link {display: inline-block; font-size: 35px; font-family: $gothic; position: relative; padding-left: 90px; margin-top: 234px; letter-spacing: -0.04em;}
 	&__bgmain {position: absolute; left: 50%; transform: translateX(-50%); bottom: -397px;}
-	&__bgphone {position: absolute; top: 50%; right: 0; transform: translateY(-43%); z-index: 1; pointer-events: none;}
+	&__bgphone {position: absolute; top: 12%; right: 0; z-index: 1; pointer-events: none;}
 	&__text {font-size: 35px; font-family: $gothic; letter-spacing: -0.04em; margin-top: 79px;}
 	&__smalltext {font-size: 18px; font-weight: 300; line-height: 1.4em; margin-top: 66px; letter-spacing: -0.04em;}
 	&__textblock {width: 51.4%;}
@@ -25,9 +25,11 @@
 
 // Секции, header, footer и т.д. //
 
-.header {width: 400px; position: relative; background-color: #f5f5f6;
-	&__logoblock {position: absolute; left: 0; top: 0; width: 100%; box-sizing: border-box; padding: 41px 39px;}
+.header {width: 400px; position: relative; left: 0; top: 0; background-color: #f5f5f6; /*overflow-y: scroll; height: 100%;*/
+	&__side {position: relative;}
+	&__logoblock {position: absolute; left: 0; top: 0; width: 100%; box-sizing: border-box; padding: 41px 39px; z-index: 1;}
 	&__logotext {font-size: 13px; margin-top: 12px; padding-left: 4px; color: $darktwo;}
+	&__logo img {width: 166px; height: 41px;}
 	&__burgermenu {float: right; position: relative; right: -4px;
 		svg {transition: all 0.25s ease-in-out;}
 		&.active svg {fill: $darkone;}
@@ -72,7 +74,7 @@
 		}
 		a {display: inline-block; width: 100%; position: relative;
 			&:before {content: ""; position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: #111e2b; transform: scale3d(0,1,1); transition: all 0.25s ease-in-out; transform-origin: right center;}
-			&:hover {
+			&:hover, &.active {
 				&:before {transform: scale3d(1,1,1);}
 				p {color: #fff !important;}
 				.header__menuheading:after {background-color: #fff;}
@@ -176,7 +178,6 @@
 /*-----------------------------------------------------*/
 
 .cases {
-	.social {position: absolute; right: 0; top: 50%; z-index: 2; transform: translateY(-58%); opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out;}
 	.content-tabs {position: relative;
 		&__switcher {position: absolute; right: 0; top: 0; bottom: 0; display: flex;
 			li {display: inline-flex; align-items: center; padding: 0 20px; transition: all 0.25s ease-in-out; cursor: pointer;
@@ -198,21 +199,22 @@
 					&:after {opacity: 1;}
 					.cases__textblock {opacity: 1; pointer-events: all;}
 				}
+				> a {width: 100%;}
 			}
-			.cases__textblock {width: auto; text-align: center; margin: auto; opacity: 0; pointer-events: none; position: relative; z-index: 2;}
+			.cases__textblock {width: auto; text-align: center; margin: auto; /*opacity: 0;*/ pointer-events: none; position: relative; z-index: 2;}
 			.cases__text {max-height: 0; margin-top: 0;}
 			.cases__arrow {opacity: 0; pointer-events: none;}
 		}
 		
-		> li {width: 100%; display: inline-block; position: relative; overflow: hidden; padding: 133px 0 113px; box-sizing: border-box; text-align: right; cursor: pointer; transition: all 0.25s ease-in-out;
+		> li {width: 100%; display: inline-block; position: relative; overflow: hidden; padding: 133px 0 113px; box-sizing: border-box; text-align: right; transition: all 0.25s ease-in-out;
 			&:after {content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(13,18,26,0) 0%, rgba(13,18,26,0) 50%,rgba(13,18,26,1) 100%); opacity: 0; pointer-events: none; transition: all 0.25a ease-in-out; z-index: 1;}
-			&:hover .social {opacity: 1; pointer-events: all;}
+			&:hover .cases__bg {transform: scale(1.05);}
 			
-			> a {display: inline-block; position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+			> a {display: inline-block; position: absolute; right: 0; top: 0; width: 40%; height: 100%;}
 		}
 		
 	}
-	&__bg {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; min-width: 100%; min-height: 100%; width: 0; object-fit: cover; pointer-events: none; z-index: -1;}
+	&__bg {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; min-width: 100%; min-height: 100%; width: 0; object-fit: cover; pointer-events: none; z-index: -1; transition: all .25s ease-in-out;}
 	&__arrow {position: absolute; right: 60px; bottom: 74px; transition: all 0.25s ease-in-out;}
 	&__textblock {display: inline-block; text-align: left; width: 470px; margin-right: 127px; transition: all 0.25s ease-in-out;}
 	&__heading {font-size: 43px; font-weight: 600; font-family: $gothic; letter-spacing: -0.04em;}
@@ -237,23 +239,32 @@
 		img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; min-width: 100%; min-height: 100%; width: 0; object-fit: cover;}
 	}
 	&__quoteblock {display: flex; height: 800px;
-		&:hover {
-			.company__quote {background-color: #fff; color: $darkone;}
-			.company__quotearrow {opacity: 1; pointer-events: all;}
-		}
 		>div {width: 50%;}
+		&_white {
+			.company__quote {background-color: #fff; color: $darkone;}
+		}
 	}
 	&__quote {background-color: #1a232c; transition: all 0.25s ease-in-out; color: #fff; position: relative; padding: 145px 167px 10px 87px; box-sizing: border-box;}
 	&__quotetext {font-size: 35px; font-style: italic; font-family: $gothic; letter-spacing: -0.04em; position: relative;
 		&:before {content: "«"; font-size: 105px; line-height: 1.3em; position: absolute; left: 0; top: -136px;}
 	}
 	&__quoteauthor {font-size: 23px; font-family: $gothic; letter-spacing: -0.04em; position: absolute; left: 88px; bottom: 58px;}
-	&__quotearrow {position: absolute; right: 64px; bottom: 60px; opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out;}
+	&__quotearrow {position: absolute; right: 64px; bottom: 60px; transition: all 0.25s ease-in-out; width: 19px; height: 35px;
+		&:hover {width: 23px; height: 42px;}
+		img {width: 100%; height: 100%;}
+	}
 	&__quoteimage {position: relative; overflow: hidden;
 		img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; min-width: 100%; min-height: 100%; width: 0; object-fit: cover;}
 	}
 	&__logos {display: flex; flex-wrap: wrap; align-items: center; margin-top: 83px;
-		div {width: 20%; text-align: center; margin-top: 21px;}
+		div {width: 20%; text-align: center; margin-top: 21px;
+			&:nth-child(2) img {width: 199px; height: 44px;}
+			&:nth-child(3) img {width: 222px; height: 55px;}
+			&:nth-child(5) img {width: 167px; height: 115px;}
+			&:nth-child(7) img {width: 230px; height: 100px;}
+			&:nth-child(8) img {width: 170px; height: 73px;}
+			&:nth-child(9) img {width: 229px; height: 34px;}
+		}
 	}
 	&__moreinfo {margin-top: 216px; position: relative; display: inline-block; padding-top: 41px;
 		&:before {content: ""; position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: $darkone; transform: scale3d(0,1,1); transition: all 0.25s ease-in-out; transform-origin: right center; z-index: 1;}
@@ -287,13 +298,13 @@
 		p {font-size: 16px; color: #a6a6a6; font-family: $gothic; letter-spacing: -0.04em;}
 	}
 	&__backbutton {font-size: 22px; font-weight: 600; color: $darkone; font-family: $gothic; position: absolute; right: 28px; top: 50%; transform: translateY(-50%); padding-left: 44px; letter-spacing: -0.04em;
-		svg {position: absolute; left: 0; top: 0; bottom: 0; margin: auto;}
+		svg {position: absolute; left: 0; top: 0; bottom: 0; margin: auto; transform: rotate(180deg);}
 	}
 	&__firstscreen {height: 1087px; box-sizing: border-box; overflow: hidden; position: relative; padding-top: 77px; padding-bottom: 70px;
 		.container {height: 100%; padding: 0 113px;}
 		>img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; min-width: 100%; min-height: 100%; width: 0; object-fit: cover; z-index: -1;}
 	}
-	&__logo {margin-left: -11px;
+	&__logo {margin-left: -11px; width: 323px; height: 97px;
 		&_bottom {position: absolute; left: 6.3%; top: 44.4%; margin: 0;}
 	}
 	&__subheading {font-size: 16px; color: #ababac; margin-top: 20px;}
@@ -396,11 +407,30 @@
 
 // Секции, header, footer и т.д. //
 
+@keyframes bouncex {
+	0%, 50%, 100% {transform: translate3d(0,0,0);}
+	25% {transform: translate3d(3px,0,0);}
+	75% {transform: translate3d(-3px,0,0);}
+}
 
+@keyframes bouncey {
+	0%, 50%, 100% {transform: translate3d(0,0,0);}
+	25% {transform: translate3d(0,3px,0);}
+	75% {transform: translate3d(0,-3px,0);}
+}
 
+.scrollbutton svg {
+	animation: bouncey 1.5s linear infinite;
+}
 
-
-
+.cases__list > li > a:hover ~ .cases__arrow,
+.company__quotetext:before,
+.comapny__quotearrow:hover,
+.contacts__address svg,
+.contacts__mail:after,
+.case__link:after {
+	animation: bouncex 1.5s linear infinite;
+}
 
 // Всплывающие окна и другие элементы сайта //
 .popup {display:none; width: 350px; padding: 20px;}
