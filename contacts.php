@@ -39,10 +39,11 @@
 	  				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.5 9.66" width="17" height="35" fill="#fff"><defs></defs><title>icon_fb</title><path d="M-713.19,218.56h1.51l-0.18,1.66h-1.33v4.83h-2v-4.83h-1v-1.66h1v-1a2.31,2.31,0,0,1,.5-1.62,2.16,2.16,0,0,1,1.66-.55h1.33v1.66h-0.83a1.43,1.43,0,0,0-.37,0,0.32,0.32,0,0,0-.2.14,0.56,0.56,0,0,0-.08.2,1.84,1.84,0,0,0,0,.29v0.83Z" transform="translate(716.19 -215.4)"/></svg>
 	  			</a></li>
 	  		</ul>
-			<form action="send.php" class="contacts__form" method="post">
-				<input type="text" name="email" placeholder="Your E-mail">
+			<form action="send.php" class="contacts__form" method="post" id="contactform">
+				<input type="text" name="email" placeholder="Your E-mail" data-required>
 				<textarea name="message" placeholder="Your Message"></textarea>
 				<button class="button">Send message</button>
+				<p class="contacts__success">Спасибо, ваш запрос отправлен</p>
 			</form>
 		</div>
 	</div>

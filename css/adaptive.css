@@ -1,21 +1,9 @@
 @media (max-width: 1800px) {
-  .technology__column {
-    width: 22.6%; }
-  .technology .content__scroll-link br {
-    display: none; }
-  .services__quote {
-    height: 600px; }
-  .content__bgphone {
-    max-width: 750px; }
-  .contacts__leftside .container {
-    padding: 0 80px; }
-  .contacts .content__text {
-    font-size: 28px; }
   .button {
     line-height: 62px;
     font-size: 30px; }
-  .company__logos div {
-    width: 25%; }
+  .content__bgphone {
+    max-width: 750px; }
   .case .content-tabs .container {
     padding: 0 50px; }
   .case__name {
@@ -26,7 +14,21 @@
     padding-left: 10px;
     margin-left: 13px; }
   .case__backbutton {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .company__logos div {
+    width: 25%; }
+  .contacts__leftside .container {
+    padding: 0 80px; }
+  .contacts .content__text {
+    font-size: 28px; }
+  .contacts__success {
+    font-size: 28px; }
+  .services__quote {
+    height: 600px; }
+  .technology__column {
+    width: 22.6%; }
+  .technology .content__scroll-link br {
+    display: none; } }
 
 @media (max-width: 1600px) {
   .technology__column {
@@ -42,6 +44,8 @@
   .contacts__leftside .container {
     padding: 0 60px; }
   .contacts .content__text {
+    font-size: 25px; }
+  .contacts__success {
     font-size: 25px; }
   .contacts__address svg {
     right: -41px;
@@ -152,6 +156,8 @@
   .services__textblock {
     width: 100%; }
   .contacts .content__text {
+    font-size: 22px; }
+  .contacts__success {
     font-size: 22px; }
   .contacts__phonemail {
     flex-wrap: wrap; }
@@ -312,6 +318,8 @@
     width: 100%; }
   .container {
     padding: 0 35px; }
+  .social {
+    display: none; }
   .header__logoblock {
     position: relative;
     padding: 17px 35px; }
@@ -523,6 +531,8 @@
     height: auto;
     bottom: 150px; }
   .contacts .content__text {
+    font-size: 35px; }
+  .contacts__success {
     font-size: 35px; }
   .contacts__address > svg {
     display: none; }
@@ -885,6 +895,8 @@
     top: -60px; }
   .contacts .content__text {
     font-size: 22px; }
+  .contacts__success {
+    font-size: 22px; }
   .contacts__leftside {
     padding-top: 36px;
     padding-bottom: 40px; }
@@ -1080,7 +1092,21 @@
     top: 5px;
     height: 21px; }
   .case .content__text {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .header__burgermenu {
+    width: 28px;
+    height: 24px;
+    margin-top: 5px; }
+  .header__burgermenu span {
+    width: 28px;
+    height: 4px; }
+  .header__burgermenu span:before, .header__burgermenu span:after {
+    width: 28px;
+    height: 4px; }
+  .header__burgermenu span:before {
+    transform: translate3d(0, -10px, 0); }
+  .header__burgermenu span:after {
+    transform: translate3d(0, 10px, 0); } }
 
 @media (max-width: 350px) {
   .technology .squareblock .content__text_link {

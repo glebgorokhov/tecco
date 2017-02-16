@@ -39,7 +39,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   position: fixed; }
 
 input:-webkit-autofill {
-  -webkit-text-fill-color: black !important; }
+  -webkit-text-fill-color: white !important; }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -111,7 +111,7 @@ body {
   display: flex; }
 
 html, body {
-  min-width: 2000px; }
+  overflow-x: hidden; }
 
 header, section, footer {
   width: 100%;
@@ -261,6 +261,8 @@ select, input, textarea {
       right: 9px;
       top: 8px;
       transition: all 0.25s ease-in-out; }
+    .squareblock__social:hover {
+      background-color: #2a3467; }
 
 .social {
   border: 4px solid #000;
@@ -397,11 +399,41 @@ select, input, textarea {
   .header__burgermenu {
     float: right;
     position: relative;
-    right: -4px; }
-    .header__burgermenu svg {
-      transition: all 0.25s ease-in-out; }
-    .header__burgermenu.active svg {
-      fill: #221f1f; }
+    right: -4px;
+    width: 45px;
+    height: 36px; }
+    .header__burgermenu span {
+      display: inline-block;
+      width: 45px;
+      height: 7px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-color: #221f1f;
+      transition: all .25s ease-in-out; }
+      .header__burgermenu span:before, .header__burgermenu span:after {
+        content: "";
+        display: inline-block;
+        width: 45px;
+        height: 7px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #221f1f;
+        transition: all .25s ease-in-out; }
+      .header__burgermenu span:before {
+        transform: translate3d(0, -15px, 0); }
+      .header__burgermenu span:after {
+        transform: translate3d(0, 15px, 0); }
+    .header__burgermenu.active span {
+      background-color: transparent; }
+      .header__burgermenu.active span:before {
+        transform: translate3d(0, 0, 0) rotate(45deg); }
+      .header__burgermenu.active span:after {
+        transform: translate3d(0, 0, 0) rotate(-45deg); }
   .header__square {
     position: absolute;
     z-index: 2; }
@@ -1472,7 +1504,8 @@ select, input, textarea {
       background-color: #fff;
       transition: all 0.25s ease-in-out; }
   .contacts__form {
-    margin-top: 96px; }
+    margin-top: 96px;
+    position: relative; }
     .contacts__form input, .contacts__form textarea {
       width: 100%;
       border: 1px solid #fff;
@@ -1480,7 +1513,13 @@ select, input, textarea {
       background-color: transparent;
       font-family: "Century Gothic", Arial, sans-serif;
       letter-spacing: -0.04em;
-      padding: 0 15px; }
+      padding: 0 15px;
+      transition: all .25s ease-in-out; }
+      .contacts__form input.error, .contacts__form textarea.error {
+        border-color: #ff0000; }
+      .contacts__form input.active, .contacts__form textarea.active {
+        opacity: 0;
+        pointer-events: none; }
     .contacts__form input {
       line-height: 72px;
       padding-bottom: 6px; }
@@ -1493,6 +1532,21 @@ select, input, textarea {
       margin-top: 46px;
       width: 100%;
       transition: all 0.25s ease-in-out; }
+      .contacts__form .button.active {
+        opacity: 0;
+        pointer-events: none; }
+  .contacts__success {
+    font-size: 35px;
+    font-family: "Century Gothic", Arial, sans-serif;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0; }
+    .contacts__success.active {
+      opacity: 1;
+      pointer-events: all; }
   .contacts__pinsquare {
     display: inline-block;
     width: 89px;
@@ -1567,7 +1621,7 @@ select, input, textarea {
 .cases__list > li > a:hover ~ .cases__arrow,
 .company__quotetext:before,
 .comapny__quotearrow:hover,
-.contacts__address svg,
+.contacts__address > svg,
 .contacts__mail:after,
 .case__link:after {
   animation: bouncex 1.5s linear infinite; }
@@ -1578,23 +1632,11 @@ select, input, textarea {
   padding: 20px; }
 
 @media (max-width: 1800px) {
-  .technology__column {
-    width: 22.6%; }
-  .technology .content__scroll-link br {
-    display: none; }
-  .services__quote {
-    height: 600px; }
-  .content__bgphone {
-    max-width: 750px; }
-  .contacts__leftside .container {
-    padding: 0 80px; }
-  .contacts .content__text {
-    font-size: 28px; }
   .button {
     line-height: 62px;
     font-size: 30px; }
-  .company__logos div {
-    width: 25%; }
+  .content__bgphone {
+    max-width: 750px; }
   .case .content-tabs .container {
     padding: 0 50px; }
   .case__name {
@@ -1605,7 +1647,21 @@ select, input, textarea {
     padding-left: 10px;
     margin-left: 13px; }
   .case__backbutton {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .company__logos div {
+    width: 25%; }
+  .contacts__leftside .container {
+    padding: 0 80px; }
+  .contacts .content__text {
+    font-size: 28px; }
+  .contacts__success {
+    font-size: 28px; }
+  .services__quote {
+    height: 600px; }
+  .technology__column {
+    width: 22.6%; }
+  .technology .content__scroll-link br {
+    display: none; } }
 
 @media (max-width: 1600px) {
   .technology__column {
@@ -1621,6 +1677,8 @@ select, input, textarea {
   .contacts__leftside .container {
     padding: 0 60px; }
   .contacts .content__text {
+    font-size: 25px; }
+  .contacts__success {
     font-size: 25px; }
   .contacts__address svg {
     right: -41px;
@@ -1731,6 +1789,8 @@ select, input, textarea {
   .services__textblock {
     width: 100%; }
   .contacts .content__text {
+    font-size: 22px; }
+  .contacts__success {
     font-size: 22px; }
   .contacts__phonemail {
     flex-wrap: wrap; }
@@ -1891,6 +1951,8 @@ select, input, textarea {
     width: 100%; }
   .container {
     padding: 0 35px; }
+  .social {
+    display: none; }
   .header__logoblock {
     position: relative;
     padding: 17px 35px; }
@@ -2102,6 +2164,8 @@ select, input, textarea {
     height: auto;
     bottom: 150px; }
   .contacts .content__text {
+    font-size: 35px; }
+  .contacts__success {
     font-size: 35px; }
   .contacts__address > svg {
     display: none; }
@@ -2464,6 +2528,8 @@ select, input, textarea {
     top: -60px; }
   .contacts .content__text {
     font-size: 22px; }
+  .contacts__success {
+    font-size: 22px; }
   .contacts__leftside {
     padding-top: 36px;
     padding-bottom: 40px; }
@@ -2659,7 +2725,21 @@ select, input, textarea {
     top: 5px;
     height: 21px; }
   .case .content__text {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .header__burgermenu {
+    width: 28px;
+    height: 24px;
+    margin-top: 5px; }
+  .header__burgermenu span {
+    width: 28px;
+    height: 4px; }
+  .header__burgermenu span:before, .header__burgermenu span:after {
+    width: 28px;
+    height: 4px; }
+  .header__burgermenu span:before {
+    transform: translate3d(0, -10px, 0); }
+  .header__burgermenu span:after {
+    transform: translate3d(0, 10px, 0); } }
 
 @media (max-width: 350px) {
   .technology .squareblock .content__text_link {
