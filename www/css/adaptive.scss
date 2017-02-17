@@ -65,6 +65,8 @@ $darktwo: #1f2124;
 	.cases .content-tabs__list li {margin-left: 30px;}
 	.case__textblock, .case__textblock_bottom {padding: 50px 70px 80px;}
 	.case .content__text {font-size: 30px;}
+	.case__about__text {font-size: 30px;}
+	.case__about__text_small {font-size: 18px;}
 }
 
 @media (max-width:1280px) {
@@ -98,6 +100,7 @@ $darktwo: #1f2124;
 	.cases__list.squares > li {padding-top: 250px; height: 400px;}
 	.case__text {margin-top: 200px;}
 	.case__firstscreen {height: auto;}
+	.case__about__block {width: auto;}
 }
 
 @media (max-width:1120px) {
@@ -125,6 +128,8 @@ $darktwo: #1f2124;
 	.case__infoblock {height: 400px;}
 	.case__designblock {padding-top: 70px;}
 	.case__designblock img {margin-top: 70px;}
+	.case__about__text {font-size: 26px;}
+	.case__about__text_small {font-size: 18px;}
 }
 
 @media (min-width:1000px) {
@@ -149,18 +154,18 @@ $darktwo: #1f2124;
 }
 
 @media (max-width:999px) {
-	body {flex-direction: column;}
-	.header {width: 100%;}
-	.content {width: 100%;}
+	body {padding-top: 69px;}
+	.header {width: 100%; height: auto; z-index: 10; overflow: hidden;}
+	.content {width: 100%; padding-left: 0;}
 	.container {padding: 0 35px;}
 	.social {display: none;}
 	
-	.header__logoblock {position: relative; padding: 17px 35px;}
+	.header__logoblock {position: relative; padding: 17px 35px; background-color: #f5f5f6;}
 	.header__logo {display: inline-block;}
 	.header__logo img {width: 143px; height: 35px;}
 	.header__square {position: relative;}
 	.header__logotext {display: none;}
-	.header__side {width: 400px; position: absolute; top: 69px; right: 0; background-color: #f5f5f6; z-index: 5; padding-bottom: 80px; transform: translate3d(100%,0,0); transition: all 0.25s ease-in-out;}
+	.header__side {width: 400px; position: fixed; top: 69px; right: 0; background-color: #f5f5f6; z-index: 5; padding-bottom: 80px; transform: translate3d(100%,0,0); transition: all 0.25s ease-in-out; overflow-y: scroll; height: 60%;}
 	.header__side.active {transform: translate3d(0,0,0);}
 	.header__square_language {top: auto; right: auto; width: auto; height: auto; margin-top: 33px; margin-left: 42px;}
 	.header__square-list {display: inline-block; opacity: 1; pointer-events: all; vertical-align: top;}
@@ -191,6 +196,7 @@ $darktwo: #1f2124;
 	.content_main .content__heading {text-align: center;}
 	.content_main .scrollbutton {bottom: auto; top: -97px;}
 	
+	.cases__list.squares > li {width: 100%;}
 	.technology .container {padding: 0 39px;}
 	.content__heading {font-size: 51px;}
 	.technology {padding-top: 91px;}
@@ -221,8 +227,9 @@ $darktwo: #1f2124;
 	.services__moreinfo {margin-top: 113px; width: 100%; padding-right: 40px; height: 550px;}
 	.services__moreinfo .content__text {margin-top: 0;}
 	.services__moreinfo .content__text_link {right: 50px;}
+	.contacts {flex-wrap: wrap;}
 	.contacts__leftside {width: 100%; padding-top: 61px; padding-bottom: 63px;}
-	.contacts__map {width: 100%; transform: translateX(-100%); top: 215px; height: auto; bottom: 150px;}
+	.contacts__map {width: 100%; transform: translateX(-100%); top: 215px; height: auto; bottom: 150px; position: absolute;}
 	.contacts .content__text {font-size: 35px;}
 	.contacts__success {font-size: 35px;}
 	.contacts__address > svg {display: none;}
@@ -264,7 +271,8 @@ $darktwo: #1f2124;
 	.company .container_bottom {padding: 0 45px;}
 	.company__moreinfo {width: 100%; margin-top: 171px; height: 551px;}
 	.company {padding-bottom: 160px;}
-	.cases .content-tabs__list {display: none;}
+	.cases .content-tabs {position: fixed; top: 69px; width: 100%; background-color: #fff; white-space: nowrap; overflow-x: scroll; z-index: 5;}
+	.cases .content-tabs__list {padding-right: 24px;}
 	.cases .content-tabs__switcher {display: none;}
 	.cases__list > li {text-align: center; height: 640px;}
 	.cases__textblock {margin: auto; position: absolute; bottom: 100px; left: 0; right: 0; text-align: center; z-index: 2;}
@@ -295,12 +303,13 @@ $darktwo: #1f2124;
 }
 
 @media (max-width:640px) {
+	body {padding-top: 45px;}
 	.container {padding: 0 25px;}
 	
 	.header__logoblock {padding: 5px 23px;}
 	.header__logo img {width: 89px;}
 	.header__burgermenu svg {width: 28px;}
-	.header__side {width: 250px; top: 45px; right: 0;}
+	.header__side {width: 250px; top: 45px; right: 0; height: 75%;}
 	.header__square_language {margin-top: 20px; margin-left: 27px;}
 	.header__square-list li {margin-left: 10px;}
 	.header__square a {width: 44px; height: 44px; font-size: 14px; padding: 1px 3px;}

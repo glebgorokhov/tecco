@@ -1,7 +1,7 @@
 @import "basics.scss";
 
-.content {display: inline-block; flex: 1; color: #fff; /*margin-left: 400px;*/
-	&_main {background-image: url('../img/bg_main2.jpg'); background-size: cover; background-position: center; padding-top: 270px; position: relative; overflow: hidden;
+.content {display: inline-block; padding-left: 400px; color: #fff; box-sizing: border-box;
+	&_main {background-image: url('../img/bg_main2.jpg'); background-size: cover; background-position: center; padding-top: 270px; position: relative; overflow: hidden; padding-bottom: 100px;
 		.container {position: relative; z-index: 2;}
 	}
 	&__heading {font-size: 51px; font-weight: 600; font-family: $gothic; letter-spacing: -0.04em;}
@@ -23,9 +23,21 @@
 	}
 }
 
+.page-main {overflow: hidden; transition: all 1s ease-in-out;
+	&__wrapper {display: flex; align-items: flex-end; overflow: hidden; transition: all 1s ease-in-out;}
+	.cases {pointer-events: none; transition: all 1s ease-in-out;
+		.content-tabs {max-height: 0; opacity: 0; pointer-events: none; transition: all 1s ease-in-out;}
+	}
+	&.active {
+		.cases {pointer-events: all;
+			.content-tabs {max-height: 1000000px; opacity: 1; pointer-events: all;}
+		}
+	}
+}
+
 // Секции, header, footer и т.д. //
 
-.header {width: 400px; position: relative; left: 0; top: 0; background-color: #f5f5f6; /*overflow-y: scroll; height: 100%;*/
+.header {width: 400px; position: fixed; left: 0; top: 0; background-color: #f5f5f6; overflow-y: scroll; height: 100%; z-index: 1;
 	&__side {position: relative;}
 	&__logoblock {position: absolute; left: 0; top: 0; width: 100%; box-sizing: border-box; padding: 41px 39px; z-index: 1;}
 	&__logotext {font-size: 13px; margin-top: 12px; padding-left: 4px; color: $darktwo;}
@@ -186,7 +198,7 @@
 
 /*-----------------------------------------------------*/
 
-.cases {
+.cases {transition: all 1s ease-in-out;
 	.content-tabs {position: relative;
 		&__switcher {position: absolute; right: 0; top: 0; bottom: 0; display: flex;
 			li {display: inline-flex; align-items: center; padding: 0 20px; transition: all 0.25s ease-in-out; cursor: pointer;
@@ -244,7 +256,7 @@
 		img {position: absolute; right: 7px; top: 0; bottom: 0; margin: auto;}
 	}
 	&__feature-text {font-size: 18px; font-weight: 300; margin-top: 58px; line-height: 1.8em;}
-	&__cityview {height: 913px; position: relative;
+	&__cityview {height: 913px; position: relative; overflow: hidden;
 		img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; min-width: 100%; min-height: 100%; width: 0; object-fit: cover;}
 	}
 	&__quoteblock {display: flex; height: 800px;
@@ -310,15 +322,17 @@
 		svg {position: absolute; left: 0; top: 0; bottom: 0; margin: auto; transform: rotate(180deg);}
 	}
 	&__firstscreen {height: 1087px; box-sizing: border-box; overflow: hidden; position: relative; padding-top: 77px; padding-bottom: 70px;
+		&:hover .case__firstscreenbg {transform: scale(1.05);}
 		.container {height: 100%; padding: 0 113px;}
-		>img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; min-width: 100%; min-height: 100%; width: 0; object-fit: cover; z-index: -1;}
+		>img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; min-width: 100%; min-height: 100%; width: 0; object-fit: cover; z-index: -1; transition: all .25s ease-in-out;}
 	}
 	&__logo {margin-left: -11px; width: 323px; height: 97px;
 		&_bottom {position: absolute; left: 6.3%; top: 44.4%; margin: 0;}
 	}
 	&__subheading {font-size: 16px; color: #ababac; margin-top: 20px;}
 	&__link {font-size: 25px; font-weight: 600; font-family: $gothic; color: #fff; letter-spacing: -0.04em; position: relative; display: inline-block; margin-top: 66px;
-		&:after {content: ""; display: inline-block; width: 107px; height: 1px; background-color: #fff; position: absolute; left: 0; bottom: -3px;}
+		&:after {content: ""; display: inline-block; width: 107px; height: 1px; background-color: #fff; position: absolute; left: 0; bottom: -3px; transition: all .25s ease-in-out; transform-origin: left center;}
+		&:hover:after {transform: scale3d(1.3,1,1);}
 	}
 	&__smalltext {font-size: 16px; margin-top: 84px; max-width: 470px;}
 	&__text {margin-top: 297px; max-width: 1080px;}
@@ -388,12 +402,12 @@
 
 /*-----------------------------------------------------*/
 
-.contacts {position: relative;
+.contacts {position: relative; display: flex;
 	.content__text {margin-top: 0;}
-	&__leftside {width: 50%; min-height: 100%; background-color: #1a1a23; box-sizing: border-box; padding-top: 160px; padding-bottom: 150px;
+	&__leftside {width: 50%; background-color: #1a1a23; box-sizing: border-box; padding-top: 160px; padding-bottom: 150px;
 		.container {padding: 0 100px;}
 	}
-	&__map {position: absolute; width: 50%; height: 100%; right: 0; top: 0; background-color: #ccc;
+	&__map {width: 50%; background-color: #ccc;
 		&.active {transform: translateX(0);}
 	}
 	&__address {line-height: 1.7em; position: relative;
@@ -401,7 +415,8 @@
 	}
 	&__phonemail {display: flex; justify-content: space-between; align-items: center; margin-top: 85px;}
 	&__mail {position: relative;
-		&:after {content: ""; position: absolute; left: 3px; bottom: -1px; width: 128px; height: 1px; background-color: #fff; transition: all 0.25s ease-in-out;}
+		&:after {content: ""; position: absolute; left: 0; bottom: -1px; width: 128px; height: 1px; background-color: #fff; transition: all 0.25s ease-in-out; transform-origin: left center;}
+		&:hover:after {transform: scale3d(1.3,1,1);}
 	}
 	&__form {margin-top: 96px; position: relative;
 		input, textarea {width: 100%; border: 1px solid #fff; font-size: 25px; background-color: transparent; font-family: $gothic; letter-spacing: -0.04em; padding: 0 15px; transition: all .25s ease-in-out;
@@ -451,16 +466,14 @@
 	75% {transform: translate3d(0,-3px,0);}
 }
 
-.scrollbutton svg {
+.content__scroll-link:hover .scrollbutton svg {
 	animation: bouncey 1.5s linear infinite;
 }
 
 .cases__list > li > a:hover ~ .cases__arrow,
-.company__quotetext:before,
-.comapny__quotearrow:hover,
-.contacts__address > svg,
-.contacts__mail:after,
-.case__link:after {
+.company__quote:hover .company__quotetext:before,
+.company__quotearrow:hover,
+.contacts__address > svg:hover {
 	animation: bouncex 1.5s linear infinite;
 }
 

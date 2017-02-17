@@ -106,8 +106,7 @@ body {
   min-height: 100%;
   font-size: 0;
   font-family: 'Open Sans', Arial, sans-serif;
-  color: #221f1f;
-  display: flex; }
+  color: #221f1f; }
 
 html, body {
   overflow-x: hidden; }
