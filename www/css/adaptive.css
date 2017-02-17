@@ -1044,6 +1044,8 @@
     padding-bottom: 100px; }
   .cases__list > li {
     height: 400px; }
+  .cases .content-tabs {
+    top: 45px; }
   .cases__heading {
     font-size: 27px; }
   .cases__subheading {
