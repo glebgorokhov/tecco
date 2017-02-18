@@ -1,3 +1,7 @@
+@import "normalize.css";
+
+@import "../fonts/fonts.css";
+
 @import "basics.scss";
 
 .content {display: inline-block; padding-left: 400px; color: #fff; box-sizing: border-box;
@@ -37,11 +41,11 @@
 
 // Секции, header, footer и т.д. //
 
-.header {width: 400px; position: fixed; left: 0; top: 0; background-color: #f5f5f6; overflow-y: scroll; height: 100%; z-index: 1;
+.header {width: 400px; position: fixed; left: 0; top: 0; background-color: #f5f5f6; height: 100%; z-index: 1;
 	&__side {position: relative;}
 	&__logoblock {position: absolute; left: 0; top: 0; width: 100%; box-sizing: border-box; padding: 41px 39px; z-index: 1;}
 	&__logotext {font-size: 13px; margin-top: 12px; padding-left: 4px; color: $darktwo;}
-	&__logo img {width: 166px; height: 41px;}
+	&__logo img {width: 166px;}
 	&__burgermenu {float: right; position: relative; right: -4px; width: 45px; height: 36px;
 		span {display: inline-block; width: 45px; height: 7px; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; background-color: $darkone; transition: all .25s ease-in-out;
 			&:before, &:after {content: ""; display: inline-block; width: 45px; height: 7px; position: absolute; left: 0; top: 0; background-color: $darkone; transition: all .25s ease-in-out;}
@@ -73,27 +77,8 @@
 		a {border-top: 0;}
 	}
 	&__menu {padding-top: 144px;
-		li {position: relative;
-			&:first-child {margin-top: 0;}
-			&:nth-child(2) {
-				a {padding: 39px 41px 61px;}
-				.header__menuicon {top: 51px; right: 41px;}
-			}
-			&:nth-child(3) {
-				a {padding: 39px 41px 52px;}
-				.header__menuicon {top: 165px; right: 35px;}
-				.header__itemtext {color: #131920; font-weight: 500;}
-			}
-			&:nth-child(4) {
-				a {padding: 39px 41px 48px;}
-				.header__menuicon {top: 50px; right: 36px;}
-			}
-			&:nth-child(5) {
-				a {padding: 39px 41px 43px;}
-				.header__menuicon {top: 54px; right: 37px;}
-			}
-		}
-		a {display: inline-block; width: 100%; position: relative;
+		li {position: relative;}
+		a {display: inline-block; width: 100%; position: relative; padding: 39px 41px 52px;
 			&:before {content: ""; position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: #111e2b; transform: scale3d(0,1,1); transition: all 0.25s ease-in-out; transform-origin: right center;}
 			&:hover, &.active {
 				&:before {transform: scale3d(1,1,1);}
@@ -107,8 +92,8 @@
 	&__menuheading {font-size: 43px; font-weight: 600; color: #221f1f; font-family: $gothic; letter-spacing: -0.04em; position: relative;
 		&:after {content: ""; position: absolute; left: 3px; bottom: -1px; width: 156px; height: 1px; background-color: #221f1f; transition: all 0.25s ease-in-out;}
 	}
-	&__itemtext {font-size: 16px; margin-top: 27px; padding-left: 4px;}
-	&__menuicon {position: absolute; transition: all 0.25s ease-in-out;}
+	&__itemtext {font-size: 16px; margin-top: 27px; padding-left: 4px; color: #131920; font-weight: 500;}
+	&__menuicon {position: absolute; transition: all 0.25s ease-in-out; bottom:54px; right:37px;}
 	&__menuicon_arrow {position: absolute; right: 45px; bottom: 26px; z-index: 2;}
 }
 
@@ -131,7 +116,7 @@
 		&:before {content: "«"; font-size: 105px; line-height: 1.3em; position: absolute; left: 0; top: -136px;}
 	}
 	&__quoteauthor {font-size: 23px; font-family: $gothic; letter-spacing: -0.04em; position: absolute; bottom: 46px;}
-	
+
 	&__outsourcing {color: $darkone; padding-top: 102px; padding-bottom: 186px;}
 	&__moreinfo {margin-top: 128px; position: relative; padding-top: 40px; display: inline-block;
 		&:before {content: ""; position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: $darkone; transform: scale3d(0,1,1); transition: all 0.25s ease-in-out; transform-origin: right center; z-index: 1;}
@@ -213,7 +198,7 @@
 		&:first-child {margin-left: 0;}
 	}
 	&__list {
-		
+
 		&.squares {
 			> li {width: 33.3333%; padding: 390px 10px 50px; height: 532px;
 				&:hover {
@@ -222,18 +207,18 @@
 				}
 				> a {width: 100%;}
 			}
-			.cases__textblock {width: auto; text-align: center; margin: auto; /*opacity: 0;*/ pointer-events: none; position: relative; z-index: 2;}
+			.cases__textblock {width: auto; text-align: center; margin: auto; opacity: 0; pointer-events: none; position: relative; z-index: 2; display:block;}
 			.cases__text {max-height: 0; margin-top: 0;}
 			.cases__arrow {opacity: 0; pointer-events: none;}
 		}
-		
+
 		> li {width: 100%; display: inline-block; position: relative; overflow: hidden; padding: 133px 0 113px; box-sizing: border-box; text-align: right; transition: all 0.25s ease-in-out;
 			&:after {content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(13,18,26,0) 0%, rgba(13,18,26,0) 50%,rgba(13,18,26,1) 100%); opacity: 0; pointer-events: none; transition: all 0.25a ease-in-out; z-index: 1;}
 			&:hover .cases__bg {transform: scale(1.05);}
-			
+
 			> a {display: inline-block; position: absolute; right: 0; top: 0; width: 40%; height: 100%;}
 		}
-		
+
 	}
 	&__bg {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; min-width: 100%; min-height: 100%; width: 0; object-fit: cover; pointer-events: none; z-index: -1; transition: all .25s ease-in-out;}
 	&__arrow {position: absolute; right: 60px; bottom: 74px; transition: all 0.25s ease-in-out;}

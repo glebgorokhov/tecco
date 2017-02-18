@@ -5,11 +5,11 @@
     <?php include "blocks/head.php"; ?>
     <meta name="robots" content="all">
     <?php include "blocks/meta.php"; ?>
-    <title></title>
+    <title>Cases | Tecco</title>
     <?php include "blocks/css.php"; ?>
 </head>
 
-<body> 
+<body>
 
 <?php include "blocks/sidebar.php"; ?>
 <?php include "blocks/social.php"; ?>

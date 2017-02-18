@@ -5,11 +5,11 @@
     <?php include "blocks/head.php"; ?>
     <meta name="robots" content="all">
     <?php include "blocks/meta.php"; ?>
-    <title></title>
+    <title>Technology | Tecco</title>
     <?php include "blocks/css.php"; ?>
 </head>
 
-<body> 
+<body>
 
 <?php include "blocks/sidebar.php"; ?>
 <?php include "blocks/social.php"; ?>
@@ -25,7 +25,7 @@
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="15" viewBox="0 0 24.406 14.812" fill="none" stroke="#fff" stroke-width="2px"><defs><filter filterUnits="userSpaceOnUse"><feFlood result="flood" flood-color="#f5f5f6"/><feComposite result="composite" operator="in" in2="SourceGraphic"/><feBlend result="blend" in2="SourceGraphic"/></filter></defs><g><path d="M519,840l-11-11" transform="translate(-507 -826.594)"/><path data-name="Shape 1 copy" d="M518.36,839L529,828.36" transform="translate(-507 -826.594)"/></g></svg>
 			</span>Почти все указанные ниже технологии используются в разработках<br> Tecco каждый день:</a>
 			<div class="technology__list">
-			
+
 				<ul class="technology__column">
 					<li class="technology__card">
 						<p class="technology__name">Languages and frameworks</p>
@@ -66,7 +66,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="8" viewBox="0 0 24.406 14.812" fill="none" stroke="#fff" stroke-width="2px"><defs><filter filterUnits="userSpaceOnUse"><feFlood result="flood" flood-color="#f5f5f6"/><feComposite result="composite" operator="in" in2="SourceGraphic"/><feBlend result="blend" in2="SourceGraphic"/></filter></defs><g><path d="M519,840l-11-11" transform="translate(-507 -826.594)"/><path data-name="Shape 1 copy" d="M518.36,839L529,828.36" transform="translate(-507 -826.594)"/></g></svg>
 					</li>
 				</ul>
-				
+
 				<ul class="technology__column">
 					<li class="technology__card">
 						<p class="technology__name">API</p>
@@ -107,7 +107,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="8" viewBox="0 0 24.406 14.812" fill="none" stroke="#fff" stroke-width="2px"><defs><filter filterUnits="userSpaceOnUse"><feFlood result="flood" flood-color="#f5f5f6"/><feComposite result="composite" operator="in" in2="SourceGraphic"/><feBlend result="blend" in2="SourceGraphic"/></filter></defs><g><path d="M519,840l-11-11" transform="translate(-507 -826.594)"/><path data-name="Shape 1 copy" d="M518.36,839L529,828.36" transform="translate(-507 -826.594)"/></g></svg>
 					</li>
 				</ul>
-				
+
 				<ul class="technology__column">
 					<li class="technology__card">
 						<p class="technology__name">Principles, methodology</p>
@@ -148,7 +148,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="8" viewBox="0 0 24.406 14.812" fill="none" stroke="#fff" stroke-width="2px"><defs><filter filterUnits="userSpaceOnUse"><feFlood result="flood" flood-color="#f5f5f6"/><feComposite result="composite" operator="in" in2="SourceGraphic"/><feBlend result="blend" in2="SourceGraphic"/></filter></defs><g><path d="M519,840l-11-11" transform="translate(-507 -826.594)"/><path data-name="Shape 1 copy" d="M518.36,839L529,828.36" transform="translate(-507 -826.594)"/></g></svg>
 					</li>
 				</ul>
-				
+
 				<ul class="technology__column">
 					<li class="technology__card">
 						<p class="technology__name">CMS</p>
@@ -189,7 +189,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="8" viewBox="0 0 24.406 14.812" fill="none" stroke="#fff" stroke-width="2px"><defs><filter filterUnits="userSpaceOnUse"><feFlood result="flood" flood-color="#f5f5f6"/><feComposite result="composite" operator="in" in2="SourceGraphic"/><feBlend result="blend" in2="SourceGraphic"/></filter></defs><g><path d="M519,840l-11-11" transform="translate(-507 -826.594)"/><path data-name="Shape 1 copy" d="M518.36,839L529,828.36" transform="translate(-507 -826.594)"/></g></svg>
 					</li>
 				</ul>
-				
+
 				<ul class="technology__column">
 					<li class="technology__card">
 						<p class="technology__name">Payments</p>
@@ -230,7 +230,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="8" viewBox="0 0 24.406 14.812" fill="none" stroke="#fff" stroke-width="2px"><defs><filter filterUnits="userSpaceOnUse"><feFlood result="flood" flood-color="#f5f5f6"/><feComposite result="composite" operator="in" in2="SourceGraphic"/><feBlend result="blend" in2="SourceGraphic"/></filter></defs><g><path d="M519,840l-11-11" transform="translate(-507 -826.594)"/><path data-name="Shape 1 copy" d="M518.36,839L529,828.36" transform="translate(-507 -826.594)"/></g></svg>
 					</li>
 				</ul>
-				
+
 				<ul class="technology__column">
 					<li class="technology__card">
 						<p class="technology__name">Other</p>
@@ -252,7 +252,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="8" viewBox="0 0 24.406 14.812" fill="none" stroke="#fff" stroke-width="2px"><defs><filter filterUnits="userSpaceOnUse"><feFlood result="flood" flood-color="#f5f5f6"/><feComposite result="composite" operator="in" in2="SourceGraphic"/><feBlend result="blend" in2="SourceGraphic"/></filter></defs><g><path d="M519,840l-11-11" transform="translate(-507 -826.594)"/><path data-name="Shape 1 copy" d="M518.36,839L529,828.36" transform="translate(-507 -826.594)"/></g></svg>
 					</li>
 				</ul>
-				
+
 			</div>
 			<a href="#" class="squareblock technology__moreinfo">
 				<p class="content__text">Для получения более подробной информации об услугах компании</p>

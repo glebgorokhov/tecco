@@ -5,11 +5,11 @@
     <?php include "blocks/head.php"; ?>
     <meta name="robots" content="all">
     <?php include "blocks/meta.php"; ?>
-    <title></title>
+    <title>Contacts | Tecco</title>
     <?php include "blocks/css.php"; ?>
 </head>
 
-<body> 
+<body>
 
 <?php include "blocks/sidebar.php"; ?>
 <?php include "blocks/social.php"; ?>
@@ -62,11 +62,11 @@
 <script>
   function initMap() {
     var myLatLng = {lat: 56.975652, lng: 24.136556};
-	
+
 	var image = {
         url: 'img/icon_pin.svg'
     };
-	  
+
     // Create a map object and specify the DOM element for display.
     var map = new google.maps.Map(document.getElementById('map'), {
       center: myLatLng,

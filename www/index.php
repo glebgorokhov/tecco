@@ -5,7 +5,7 @@
     <?php include "blocks/head.php"; ?>
     <meta name="robots" content="all">
     <?php include "blocks/meta.php"; ?>
-    <title></title>
+    <title>Tecco | Web and mobile solutions</title>
     <?php include "blocks/css.php"; ?>
 </head>
 
@@ -26,7 +26,7 @@
   		  <img class="content__bgphone" src="img/phone.png" alt="@@">
   		</section>
   </div>
-	
+
 	<?php include "blocks/caseblock.php"; ?>
 </div>
 
