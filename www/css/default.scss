@@ -181,8 +181,13 @@
 	}
 }
 
+.squareblock p {transition:color .25s ease-in-out}
+
 /*-----------------------------------------------------*/
 
+
+
+    
 .cases {transition: all 1s ease-in-out;
 	.content-tabs {position: relative;
 		&__switcher {position: absolute; right: 0; top: 0; bottom: 0; display: flex;

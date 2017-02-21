@@ -94,6 +94,8 @@ $darktwo: #1f2124;
 	.content {padding-left:360px;}
 	.header__logoblock, li.header__caseslink a, .header__menu a {padding-left:30px; padding-right:30px;}
 	.header__menuicon, .header__menuicon_arrow, li.header__caseslink .header__menuicon, .header__square_language {right:30px;}
+    .cases__list.squares > li {padding: 270px 10px 50px; height: 410px;}
+    .cases__heading {font-size:35px;}
 }
 
 @media (max-width:1440px) {
@@ -340,6 +342,9 @@ $darktwo: #1f2124;
 	.case__contactblock {padding-top: 43px; padding-bottom: 60px;}
 	.case__contactblock .container {padding: 0 47px;}
 	.case__contactblock .squareblock {width: 100%; height: 550px;}
+    
+    .cases__list.squares > li {padding-top:390px}
+    .cases__list.squares .cases__textblock {opacity:1 !important}
 }
 
 @media (max-width:640px) {
@@ -361,7 +366,7 @@ $darktwo: #1f2124;
 	.header__square_social li:nth-child(1) svg {width: 8px;}
 	.header__square_social li:nth-child(2) svg {width: 14px;}
 	.header__square_social li:nth-child(3) svg {width: 14px;}
-	.header__menuheading {font-size: 27px;}
+	.header__menuheading {font-size: 26px;}
 	.header__menuheading:after {width: 98px;}
 	.header__menu li:nth-child(2) .header__menuicon {width: 16px; top: 17px; right: 24px;}
 	.header__menu li:nth-child(3) .header__itemtext {margin-top: 15px;}
@@ -430,7 +435,7 @@ $darktwo: #1f2124;
 	.contacts__form input {line-height: 44px; padding-bottom: 4px;}
 	.contacts__form textarea {margin-top: 27px; padding: 13px 10px; height: 195px;}
 	.contacts__form .button {margin-top: 28px; line-height: 45px; font-size: 22px; padding-bottom: 5px;}
-	.contacts__map {top: 131px; bottom: 93px;}
+	.contacts__map {top: 180px; bottom: 0;}
 	.contacts__mapimage {width: 90px;}
 	.contacts__mapimage:nth-child(1) {width: 68px;}
 	.company__mainpart {padding-top: 56px; padding-bottom: 0;}
