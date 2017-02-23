@@ -50,7 +50,7 @@
 			<img class="cases__arrow" src="img/icon_arrow_4.svg" alt="@@" width="31" height="26">
 			<img class="cases__bg" src="img/casebg_2.jpg" alt="@@">
 		</li>
-		<li data-category="corporate">
+		<li data-category="corporate onlineservices">
 			<a href="#"></a>
 			<div class="cases__textblock">
 				<p class="cases__heading">FOTO - FOX</p>
